@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import registerServiceWorker from "./registerServiceWorker";
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import registerServiceWorker from './registerServiceWorker';
 
 class App extends Component {
   state = {
-    inputValue: "",
+    inputValue: '',
     todos: []
   };
 
   onChange = e => {
-    this.setState({ inputValue: e.target.value });
+    this.setState({inputValue: e.target.value});
   };
 
   getRandomId = () => {
-    let text = "";
+    let text = '';
     const possible =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz0123456789';
     for (let i = 0; i < 16; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
@@ -29,18 +29,18 @@ class App extends Component {
       id: this.getRandomId()
     };
     const currentTodos = [...this.state.todos, todoToAdd];
-    this.setState({ todos: currentTodos, inputValue: "" });
+    this.setState({todos: currentTodos, inputValue: ''});
     console.log(currentTodos);
   };
 
   removeTodo = todo => {
     const filtered = this.state.todos.filter(el => el !== todo);
-    this.setState({ todos: filtered });
+    this.setState({todos: filtered});
   };
 
   clearTodos = e => {
     e.preventDefault();
-    this.setState({ todos: [] });
+    this.setState({todos: []});
   };
 
   render() {
@@ -61,9 +61,9 @@ class App extends Component {
         </form>
         <div>
           <ul>
-            {this.state.todos.map((todo, index) => {
+            {this.state.todos.map((todo) => {
               return (
-                <li onClick={() => this.removeTodo(todo)} key={index}>
+                <li onClick={() => this.removeTodo(todo)} key={todo.id}>
                   {todo.name}
                 </li>
               );
@@ -75,5 +75,5 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
