@@ -2,15 +2,12 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
+import TodoInput from "./components/TodoInput";
+import TodoItem from "./components/TodoItem/TodoItem";
 
 class App extends Component {
   state = {
-    inputValue: "",
     todos: []
-  };
-
-  onChange = e => {
-    this.setState({ inputValue: e.target.value });
   };
 
   getRandomId = () => {
@@ -22,10 +19,9 @@ class App extends Component {
     return text;
   };
 
-  addTodo = e => {
-    e.preventDefault();
+  addTodo = value => {
     const todoToAdd = {
-      name: this.state.inputValue,
+      name: value,
       id: this.getRandomId()
     };
     const currentTodos = [...this.state.todos, todoToAdd];
@@ -47,25 +43,20 @@ class App extends Component {
     return (
       <div>
         <h2>Todo App</h2>
-        <form>
-          <input
-            value={this.state.inputValue}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Add a mission"
-          />
-          <button onClick={this.addTodo} type="submit">
-            Add Task
-          </button>
-          <button onClick={this.clearTodos}>Clear Todos</button>
-        </form>
+        <TodoInput
+          onChange={this.onChange}
+          clearTodos={this.clearTodos}
+          addTodo={this.addTodo}
+        />
         <div>
           <ul>
             {this.state.todos.map((todo, index) => {
               return (
-                <li onClick={() => this.removeTodo(todo)} key={index}>
-                  {todo.name}
-                </li>
+                <TodoItem
+                  name={todo.name}
+                  key={index}
+                  onClick={() => this.removeTodo(todo)}
+                />
               );
             })}
           </ul>
