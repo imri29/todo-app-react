@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import TodoInput from "./components/TodoInput";
-import TodoItem from "./components/TodoItem/TodoItem";
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoItem from './components/TodoItem/TodoItem';
 
 class App extends Component {
   state = {
@@ -26,7 +26,6 @@ class App extends Component {
     };
     const currentTodos = [...this.state.todos, todoToAdd];
     this.setState({todos: currentTodos, inputValue: ''});
-    console.log(currentTodos);
   };
 
   removeTodo = todo => {
@@ -43,14 +42,14 @@ class App extends Component {
     return (
       <div>
         <h2>Todo App</h2>
-        <TodoInput
+        <TodoForm
           onChange={this.onChange}
           clearTodos={this.clearTodos}
           addTodo={this.addTodo}
         />
         <div>
           <ul>
-            {this.state.todos.map((todo) => {
+            {this.state.todos.map(todo => {
               return (
                 <TodoItem
                   name={todo.name}
