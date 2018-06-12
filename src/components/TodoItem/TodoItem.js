@@ -14,8 +14,11 @@ class TodoItem extends Component {
   render() {
     return (
       <div className="mx-auto">
-        <li className="todo-item list-group-item" onClick={this.props.onButtonClick}>
-          <span style={{color: this.state.done ? 'grey' : 'rebeccapurple'}}>
+        <li className="todo-item list-group-item">
+          <span
+            onClick={this.props.onClick}
+            style={{color: this.state.done ? 'grey' : 'rebeccapurple'}}
+          >
             {this.props.name}
           </span>
           <Button
