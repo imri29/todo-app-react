@@ -12,17 +12,20 @@ class TodoItem extends Component {
   };
 
   render() {
-    return <div>
-        <li className="todo-item" onClick={this.props.onClick}>
+    return (
+      <div className="mx-auto">
+        <li className="todo-item list-group-item" onClick={this.props.onClick}>
           <span style={{color: this.state.done ? 'grey' : 'rebeccapurple'}}>
             {this.props.name}
           </span>
+          <Button
+            text={this.state.done ? 'Todo' : 'Done'}
+            onClick={this.onButtonClick}
+          />
         </li>
-        <Button text={this.state.done ? 'Todo' : 'Done'} onClick={this.onButtonClick} />
-      </div>;
+      </div>
+    );
   }
 }
 
 export default TodoItem;
-
-//todo: change the text of the done button with a ternary operator (similar to style)

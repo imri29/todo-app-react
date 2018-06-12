@@ -20,6 +20,7 @@ class App extends Component {
   };
 
   addTodo = value => {
+    console.log(value);
     const todoToAdd = {
       name: value,
       id: this.getRandomId()
@@ -48,7 +49,7 @@ class App extends Component {
           addTodo={this.addTodo}
         />
         <div>
-          <ul>
+          <ul className="list-group col-sm-12">
             {this.state.todos.map(todo => {
               return (
                 <TodoItem

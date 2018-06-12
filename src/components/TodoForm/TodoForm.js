@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from '../Button/Button';
+import './todo-form.css'
 
 class TodoForm extends Component {
   state = {
@@ -22,7 +23,7 @@ class TodoForm extends Component {
           value={this.state.inputValue}
           onChange={e => this.onChange(e)}
           type="text"
-          placeholder="Add a mission"
+          placeholder="Add a Todo"
         />
         <Button text="Add Task" onClick={this.onAddTodo} />
         <Button text="Clear" onClick={this.props.clearTodos} />
