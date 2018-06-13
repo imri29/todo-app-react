@@ -60,4 +60,4 @@ export default class App extends Component {
 }
 
 
-//Todo: fix removing a nameless todo.
+//Todo: fix removing a nameless todo. try removing button from li in TodoItem.

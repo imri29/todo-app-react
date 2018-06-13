@@ -1,4 +1,15 @@
 .todo-item {
   color: rebeccapurple;
+  font-size: 22px;
 }
 
+.times {
+  display: inline-block;
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-text {
+  margin-right: 8px;
+}
