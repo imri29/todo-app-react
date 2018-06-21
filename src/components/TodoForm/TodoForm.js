@@ -20,6 +20,7 @@ class TodoForm extends Component {
     return (
       <div>
         <input
+
           value={this.state.inputValue}
           onChange={e => this.onChange(e)}
           type="text"

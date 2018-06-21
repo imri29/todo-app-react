@@ -1,5 +1,9 @@
 input {
     width: 15rem;
-    height: 36px;
+    height: 38px;
+    padding: .375rem .75rem;
     font-family: 'Sunflower', sans-serif;
+    border-radius: 0.25rem;
+    margin-right: 10px;
+    border: #17a2b8 solid 1px;
 }
