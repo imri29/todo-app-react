@@ -15,7 +15,7 @@ class TodoItem extends Component {
     return (
       <div className="mx-auto li-container">
         <li
-          style={{color: this.state.done ? '#d3d3d3' : 'rebeccapurple'}}
+          style={{color: this.state.done ? '#d3d3d3' : '#008000'}}
           className="todo-item list-group-item"
         >
           <span onClick={this.props.onClick} className="times">

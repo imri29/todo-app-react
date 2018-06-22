@@ -5,5 +5,8 @@ input {
     font-family: 'Sunflower', sans-serif;
     border-radius: 0.25rem;
     margin-right: 10px;
+    margin-left: 7px;
     border: #17a2b8 solid 1px;
+    background-color: beige;
+    color: #008000;
 }

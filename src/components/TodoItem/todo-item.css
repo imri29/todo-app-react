@@ -1,6 +1,8 @@
 .todo-item {
-  color: rebeccapurple;
+  color: #008000;
   font-size: 22px;
+  margin-top: 15px;
+  background-color: transparent;
 }
 
 .times {
@@ -8,6 +10,11 @@
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
+  color: darkgray;
+}
+
+.times:hover {
+  color: black;
 }
 
 .todo-text {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoItem from '../TodoItem/TodoItem';
+import './app.css'
 
 export default class App extends Component {
   state = {
