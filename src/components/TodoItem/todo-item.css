@@ -1,5 +1,5 @@
 .todo-item {
-  color: #008000;
+  color: #B82C16;
   font-size: 22px;
   margin-top: 15px;
   background-color: transparent;
@@ -10,7 +10,7 @@
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
-  color: darkgray;
+  color: #16b87d;
 }
 
 .times:hover {
