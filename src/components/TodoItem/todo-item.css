@@ -1,8 +1,14 @@
 .todo-item {
-  color: #B82C16;
+  color: #232b2b;
   font-size: 22px;
-  margin-top: 15px;
+  margin: 15px 15px 0 15px;
   background-color: transparent;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  text-wrap: avoid;
 }
 
 .times {
@@ -10,7 +16,7 @@
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
-  color: #16b87d;
+  color: #17a2b8;
 }
 
 .times:hover {
@@ -18,5 +24,5 @@
 }
 
 .todo-text {
-  margin-right: 8px;
+  margin-right: auto;
 }

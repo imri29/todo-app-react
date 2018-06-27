@@ -18,9 +18,8 @@ class TodoForm extends Component {
 
   render() {
     return (
-      <div>
+      <form onSubmit={e => e.preventDefault()}>
         <input
-
           value={this.state.inputValue}
           onChange={e => this.onChange(e)}
           type="text"
@@ -28,7 +27,7 @@ class TodoForm extends Component {
         />
         <Button text="Add Task" onClick={this.onAddTodo} />
         <Button text="Clear" onClick={this.props.clearTodos} />
-      </div>
+      </form>
     );
   }
 }
